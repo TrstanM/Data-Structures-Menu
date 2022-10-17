@@ -10,13 +10,13 @@ import java.util.*;
 public class Menu extends Hashmap{
     public static void main (String [] args) {
         Scanner input = new Scanner(System.in);
-        Hashmap nice = new Hashmap();
+        StackClass nice = new StackClass();
         int select;
         
         do {
         System.out.println("Data Structures Menu");
         System.out.println("--------------------");
-        System.out.println("1) Recursion\n2) Hash Map\n3) Exit");
+        System.out.println("1) Recursion\n2) Hash Map\n3)Array \n4)Exit");
         select = input.nextInt();
         
         switch (select) {
@@ -27,6 +27,9 @@ public class Menu extends Hashmap{
                 nice.getHashmapMenu();
                 break;
             case 3:
+                nice.getArrayMenu();
+                break;
+            case 4:
                 System.out.println("See ya!");
                 break;
         }
