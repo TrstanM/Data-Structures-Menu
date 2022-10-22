@@ -24,7 +24,7 @@ public class Hashmap extends Recursion {
                 System.out.println(map);
                 break;
             case 2:
-                delete("","");
+                Delete("","");
                 System.out.println(map);
                 break;
             case 3:
@@ -46,7 +46,7 @@ public class Hashmap extends Recursion {
         return name + " " + pass;
     }
     
-    public String delete (String name, String pass) {
+    public String Delete (String name, String pass) {
         Scanner input = new Scanner (System.in);
         System.out.println("Enter a name and password you want to delete\n" + "Name:\n" + "Password: ");
         name = input.next();
@@ -56,7 +56,7 @@ public class Hashmap extends Recursion {
         return "Removed: " + name + " " + pass;
     }
     
-    public String change () {
+    private String change () {
         Scanner input = new Scanner (System.in);
         String enter_n, enter_p;
         System.out.println("Do you want to change a name or password?");

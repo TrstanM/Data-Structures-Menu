@@ -16,7 +16,7 @@ public class Menu extends Hashmap{
         do {
         System.out.println("Data Structures Menu");
         System.out.println("--------------------");
-        System.out.println("1) Recursion\n2) Hash Map\n3)Array \n4)Exit");
+        System.out.println("1) Recursion\n2) Hash Map\n3) Linked List\n4) Queue\n5) Stack\n6) Exit");
         select = input.nextInt();
         
         switch (select) {
@@ -30,10 +30,17 @@ public class Menu extends Hashmap{
                 nice.getArrayMenu();
                 break;
             case 4:
+                
+                break;
+            case 5:
+                
+                break;
+                
+            case 6:
                 System.out.println("See ya!");
                 break;
         }
         
-        } while(select != 3);
+        } while(select != 6);
     }
 }
