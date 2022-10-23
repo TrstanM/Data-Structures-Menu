@@ -1,5 +1,5 @@
 
-package DataStructures.pkg1;
+package MainStructures;
 
 /**
  *
@@ -17,22 +17,22 @@ public class LinkedListClass extends Hashmap{
         int choice;
         
         do {
-        System.out.println("Welcome to the Vault!\n1. Add items to the vault\n2. Find an item\n3. Change an item\n4. Delete an item\n5. Exit");
+        System.out.println("\nWelcome to the Vault!\n1. Add items to the vault\n2. Find an item\n3. Change an item\n4. Delete an item\n5. Exit");
         choice = input.nextInt();
         switch (choice) {
             case 1:
                 add("");
                 break;
             case 2:
-                System.out.println("Enter the item you want to find:");
+                System.out.println("\nEnter the item you want to find:");
                 find();
                 break;
             case 3:
-                System.out.println("Enter the item you want to change:");
+                System.out.println("\nEnter the item you want to change:");
                 change();
                 break;
             case 4:
-                System.out.println("Enter the item you want to delete from the vault:");
+                System.out.println("\nEnter the item you want to delete from the vault:");
                 delete();
                 break;
             case 5:
@@ -45,7 +45,7 @@ public class LinkedListClass extends Hashmap{
     public String add (String item) {
         Scanner input = new Scanner(System.in);
         do {
-            System.out.println("Enter an item(enter 'stop' to exit):");
+            System.out.println("\nEnter an item(enter 'stop' to exit):");
             item = input.next();
             vault.add(item);
             vault.remove("stop");
@@ -85,6 +85,8 @@ public class LinkedListClass extends Hashmap{
         String choice = input.next();
         switch (choice) {
             case "yes":
+            case "Yes":
+            case "YES":    
                 vault.remove(item);
                 System.out.println(vault);
                 break;
@@ -100,7 +102,7 @@ public class LinkedListClass extends Hashmap{
         return vault.toString();
     }
     
-    public void getArrayMenu() {
+    public void getLinkedListMenu() {
         menu();
     }
 }

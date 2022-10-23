@@ -1,10 +1,11 @@
 
-package DataStructures.pkg1;
+package MainStructures;
 
 /**
  *
  * @author boshu
  */
+import BFS_and_DFS.StackClass;
 import java.util.*;
 
 public class Menu extends Hashmap{
@@ -16,7 +17,7 @@ public class Menu extends Hashmap{
         do {
         System.out.println("Data Structures Menu");
         System.out.println("--------------------");
-        System.out.println("1) Recursion\n2) Hash Map\n3) Linked List\n4) Queue\n5) Stack\n6) Exit");
+        System.out.println("1) Recursion\n2) Hash Map(Password Manager)\n3) Linked List(Item Vault)\n4) Queue(GPS)\n5) Stack(Word Search)\n6) Exit");
         select = input.nextInt();
         
         switch (select) {
@@ -27,15 +28,14 @@ public class Menu extends Hashmap{
                 nice.getHashmapMenu();
                 break;
             case 3:
-                nice.getArrayMenu();
+                nice.getLinkedListMenu();
                 break;
             case 4:
-                
+                nice.getQueueMenu();
                 break;
             case 5:
-                
+                nice.getStackMenu();
                 break;
-                
             case 6:
                 System.out.println("See ya!");
                 break;

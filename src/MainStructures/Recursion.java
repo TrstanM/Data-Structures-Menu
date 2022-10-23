@@ -1,5 +1,5 @@
 
-package DataStructures.pkg1;
+package MainStructures;
 /**
  *
  * @author boshu
@@ -12,7 +12,7 @@ public class Recursion {
         
         int call;
         do {
-        System.out.println("Enter a number between 6 and 21 (Enter -1 to exit): ");
+        System.out.println("\nEnter a number between 6 and 21 (Enter -1 to exit): ");
         call = input.nextInt();
         System.out.println();
         
