@@ -5,7 +5,8 @@ package MainStructures;
  *
  * @author boshu
  */
-import BFS_and_DFS.StackClass;
+import GUI_Package.GUI;
+import Stack_and_Queue.StackClass;
 import java.util.*;
 
 public class Menu extends Hashmap{
@@ -17,7 +18,7 @@ public class Menu extends Hashmap{
         do {
         System.out.println("Data Structures Menu");
         System.out.println("--------------------");
-        System.out.println("1) Recursion\n2) Hash Map(Password Manager)\n3) Linked List(Item Vault)\n4) Queue(GPS)\n5) Stack(Word Search)\n6) Exit");
+        System.out.println("1) Recursion\n2) Hash Map(Password Manager)\n3) Linked List(Item Vault)\n4) Queue(Web History)\n5) Stack(Palindrome)\n6) Exit");
         select = input.nextInt();
         
         switch (select) {

@@ -14,7 +14,7 @@ public class Hashmap extends Recursion {
         Scanner input = new Scanner (System.in);
         int choice;
         do {
-        System.out.println("\nWelcome to the Hash Map menu!");
+        System.out.println("\nWelcome to the Password Manager!");
         System.out.println("1) Insert name and password\n" + "2) Delete name and password\n" + "3) Change name and/or password\n" + "4) Exit");
         choice = input.nextInt();
         
@@ -24,12 +24,15 @@ public class Hashmap extends Recursion {
                 System.out.println(map);
                 break;
             case 2:
-                Delete("","");
+                delete("","");
                 System.out.println(map);
                 break;
             case 3:
                 change();
                 System.out.println(map);
+                break;
+            case 4:
+                System.out.println("You have exited the Password Manager!");
                 break;
         }
         } while(choice != 4);
@@ -46,7 +49,7 @@ public class Hashmap extends Recursion {
         return map.toString();
     }
     
-    public String Delete (String name, String pass) {
+    public String delete (String name, String pass) {
         Scanner input = new Scanner (System.in);
         
         System.out.println("\nEnter a name and password you want to delete\n");

@@ -3,13 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/DataStructures/pkg1/GUI.java</file>
-            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/DataStructures/pkg1/Menu.java</file>
-            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/DataStructures/pkg1/QueueClass.java</file>
-            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/DataStructures/pkg1/Hashmap.java</file>
-            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/DataStructures/pkg1/Recursion.java</file>
-            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/DataStructures/pkg1/LinkedListClass.java</file>
-            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/DataStructures/pkg1/StackClass.java</file>
+            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/MainStructures/Menu.java</file>
+            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/MainStructures/LinkedListClass.java</file>
+            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/Stack_and_Queue/QueueClass.java</file>
+            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/MainStructures/Hashmap.java</file>
+            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/Stack_and_Queue/Node.java</file>
+            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/MainStructures/Recursion.java</file>
+            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/Stack_and_Queue/StackClass.java</file>
+            <file>file:/D:/NetBeans/Java%20Projects/Practice%20Stuff/Practice%201/src/GUI_Package/GUI.java</file>
         </group>
     </open-files>
 </project-private>

@@ -36,7 +36,7 @@ public class LinkedListClass extends Hashmap{
                 delete();
                 break;
             case 5:
-                System.out.println("You have closed the vault");
+                System.out.println("You have closed the Vault!");
                 break;
         }
         }while(choice != 5);
@@ -56,12 +56,17 @@ public class LinkedListClass extends Hashmap{
     }
     
     public void find () {
+        if (vault.isEmpty()) {
+            System.out.println("Vault is empty");
+            return;
+        }
         Scanner input = new Scanner(System.in);
         item = input.next();
         Iterator finder = vault.iterator();
         while(finder.hasNext()) {
             if(finder.next() == item) {
                 System.out.println("We found" + item + " !");
+                return;         
             }
         }
     }
