@@ -9,7 +9,7 @@ import java.util.*;
  */
 
 public class StackClass extends QueueClass{
-    Stack stack = new Stack();
+    Stack<String> stack = new Stack<>();
     
     private void menu() {
         Scanner input = new Scanner(System.in);
@@ -27,11 +27,15 @@ public class StackClass extends QueueClass{
                 palChecker(word);
                 break;
             case 2:
+                try {
                 System.out.println("\nEnter a palindrome you would like to use: " + stack);
                 word = input.next();
                 System.out.println("\nEnter a letter:");
                 String letter = input.next();
                 letterCheck(word, letter);
+            } catch(RuntimeException e) {
+                System.out.println("invalid input");
+            }
                 break;
             case 3:
                 System.out.println("\nHow long should the word be?: ");
@@ -49,7 +53,7 @@ public class StackClass extends QueueClass{
     public boolean palChecker(String str) {
         Stack s1 = new Stack();
         for (int i = 0; i < str.length(); i++) {
-            s1.push(str.charAt(i));
+            s1.add(str.charAt(i));
         }
         String reverseStr = "";
         while(!s1.isEmpty()) {
