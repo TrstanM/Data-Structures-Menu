@@ -5,7 +5,7 @@ import java.util.*;
 
 /**
  *
- * @author boshu
+ * @author Tristan Miller
  */
 
 public class StackClass extends QueueClass{
