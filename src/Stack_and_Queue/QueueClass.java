@@ -3,7 +3,7 @@ package Stack_and_Queue;
 
 /**
  *
- * @author boshu
+ * @author Tristan Miller
  */
 import MainStructures.LinkedListClass;
 import java.util.ArrayList;
