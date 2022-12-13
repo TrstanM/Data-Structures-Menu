@@ -9,20 +9,28 @@ import java.util.Scanner;
 public class Recursion {
     private void recursionMenu() {
         Scanner input = new Scanner(System.in);
-        
-        int call;
+        int call = 0; String choose = null;
         do {
-        System.out.println("\nEnter a number between 6 and 21 (Enter -1 to exit): ");
-        call = input.nextInt();
-        System.out.println();
-        
-        if (call == -1) {
-            System.out.println("See ya!");
-        }
-        
-        else {
+            try {
+                System.out.println("\nEnter a number between 6 and 21 (Enter -1 to exit): ");
+                call = input.nextInt();
+                System.out.println();
+            }catch (RuntimeException e) {
+                System.out.println("Not a valid input!");
+            }
+            if (call == -1) {
+                System.out.println("See ya!");
+            }
+            else {
+                moveSelector(choose, call);
+            }
+        }while(call != -1);
+    }
+
+    private void moveSelector(String choose, int call) {
+        Scanner input = new Scanner(System.in);
         System.out.println("Would you like to go forward(F) or backward(B)?: ");
-        String choose = input.next();
+        choose = input.next();
         if( null == choose){
             System.out.println("That is not a valid input.");
         }
@@ -37,26 +45,26 @@ public class Recursion {
                     System.out.println("That is not a valid input.");
                     break;
             }
-        }
-        }while(call != -1);
     }
     
-    private void countForward(int call) {
+    private int countForward(int call) {
         if (call == 22){
             System.out.println("Done!");
+            return call;
         }
         else {
             System.out.println(call++);
-            countForward(call);
+            return countForward(call);
         }
     }
-    private void countBack(int call) {
+    private int countBack(int call) {
         if (call == 5){
             System.out.println("Done!");
+            return call;
         }
         else {
             System.out.println(call--);
-            countBack(call);
+            return countBack(call);
         }
     }
     

@@ -19,40 +19,44 @@ public class QueueClass extends LinkedListClass {
     
     Queue<String> queue = new PriorityQueue<>(Collections.reverseOrder());
     List<String> list = new ArrayList<>();
-    Node head, tail;
     
     private void menu() {
-        Scanner input = new Scanner(System.in);
-        int choice; 
-        String enter;
-        
-        do {
-        System.out.println("\nWelcome to Your Web History!\n1) Show History\n2) Find a location\n3) Get a random link\n4) Exit");
-        choice = input.nextInt();
-        
-        switch(choice) {
-            case 1:
-                System.out.println("\nHere is your history!" + 
-                                   "\n-----------------------");
-                historyList();
-                System.out.println("\nWould you like to add more links?: ");
-                enter = input.next();
-                enterLink(enter, "");
-                
-                break;
-            case 2:
-                System.out.println("Enter website you are trying to get to:");
-                enter = input.next();
-                find(enter);
-                break;
-            case 3:
-                System.out.println("Here is a random link: " + random(list));
-                break;
-            case 4:
-                System.out.println("You have exited Your Web History!");
-                break;
+        int choice = 0; String enter = null;
+        try {
+            menuSelect(choice, enter);
+        }catch (RuntimeException e) {
+            System.out.println("Not a valid input!");
         }
-        }while(choice != 4);
+    }
+
+    private void menuSelect(int choice, String enter ) {
+        Scanner input = new Scanner(System.in);
+        do {
+            System.out.println("\nWelcome to Your Web History!\n1) Show History\n2) Find a location\n3) Get a random link\n4) Exit");
+            choice = input.nextInt();
+            
+            switch(choice) {
+                case 1:
+                    System.out.println("\nHere is your history!" + 
+                                       "\n-----------------------");
+                    historyList();
+                    System.out.println("\nWould you like to add more links?: ");
+                    enter = input.next();
+                    enterLink(enter, "");
+                    break;
+                case 2:
+                    System.out.println("Enter website you are trying to get to:");
+                    enter = input.next();
+                    find(enter);
+                    break;
+                case 3:
+                    System.out.println("Here is a random link: " + random(list));
+                    break;
+                case 4:
+                    System.out.println("You have exited Your Web History!");
+                    break;
+            }
+            }while(choice != 4);
     }
     
     public void historyList() {

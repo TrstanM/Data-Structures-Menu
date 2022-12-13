@@ -10,13 +10,20 @@ import java.util.*;
 
 public class StackClass extends QueueClass{
     Stack<String> stack = new Stack<>();
-    
     private void menu() {
-        Scanner input = new Scanner(System.in);
-        int choice;
-        String word;
-        
+        int choice = 0;
+        String word = null;
         do {
+            try {
+            StackSelector(choice, word);
+            }catch(RuntimeException e) {
+                System.out.println("Not a valid input!");
+            }
+        }while(choice != 4);
+    }
+
+    private void StackSelector(int choice, String word) {
+        Scanner input = new Scanner(System.in);
         System.out.println("\nWelcome to the Palindroime Checker!\n1) Check for Palindrome\n2) Check a letter in the Palindrome\n3) Get a random string\n4) Exit");
         choice = input.nextInt();
         
@@ -47,7 +54,6 @@ public class StackClass extends QueueClass{
                 System.out.println("You have exited the Palindroime Checker!");
                 break;
         }
-        }while(choice != 4);
     }
     
     public boolean palChecker(String str) {

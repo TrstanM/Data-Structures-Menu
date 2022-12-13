@@ -13,36 +13,43 @@ public class LinkedListClass extends Hashmap{
     private String item;
     
     private void menu () {
-        Scanner input = new Scanner(System.in);
-        int choice;
-        
+        int choice = 0;
         do {
+            try {
+            LinkedListMenuSelect(choice);
+            }catch(RuntimeException e) {
+                System.out.println("Not a valid input!");
+            }
+        }while(choice != 5);
+    }
+
+    private void LinkedListMenuSelect(int choice) {
+        Scanner input = new Scanner(System.in);
         System.out.println("\nWelcome to the Vault!\n1. Add items to the vault\n2. Find an item\n3. Change an item\n4. Delete an item\n5. Exit");
         choice = input.nextInt();
         switch (choice) {
             case 1:
-                add("");
+                add(null);
                 break;
             case 2:
-                System.out.println("\nEnter the item you want to find:");
+                System.out.print("\nEnter the item you want to find:");
                 find();
                 break;
             case 3:
-                System.out.println("\nEnter the item you want to change:");
+                System.out.print("\nEnter the item you want to change:");
                 change();
                 break;
             case 4:
-                System.out.println("\nEnter the item you want to delete from the vault:");
+                System.out.print("\nEnter the item you want to delete from the vault:");
                 delete();
                 break;
             case 5:
                 System.out.println("You have closed the Vault!");
                 break;
         }
-        }while(choice != 5);
     }
     
-    public String add (String item) {
+    private String add (String item) {
         Scanner input = new Scanner(System.in);
         do {
             System.out.println("\nEnter an item(enter 'stop' to exit):");
@@ -55,7 +62,7 @@ public class LinkedListClass extends Hashmap{
         return vault.toString();
     }
     
-    public void find () {
+    private void find () {
         if (vault.isEmpty()) {
             System.out.println("Vault is empty");
             return;
@@ -71,7 +78,7 @@ public class LinkedListClass extends Hashmap{
         }
     }
     
-    public String change() {
+    private String change() {
         Scanner input = new Scanner(System.in);
         find();
         System.out.println("Enter new item:");
@@ -83,7 +90,7 @@ public class LinkedListClass extends Hashmap{
     }
     
     
-    public String delete() {
+    private String delete() {
         Scanner input = new Scanner(System.in);
         find();
         System.out.println("Do you really want to delete this item?:");
