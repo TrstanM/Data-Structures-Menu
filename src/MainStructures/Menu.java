@@ -3,7 +3,7 @@ package MainStructures;
 
 /**
  *
- * @author boshu
+ * @author Tristan Miller
  */
 import Stack_and_Queue.StackClass;
 import java.util.*;
